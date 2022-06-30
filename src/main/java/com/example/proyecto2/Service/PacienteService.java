@@ -1,35 +1,39 @@
 package com.example.proyecto2.Service;
 
-import com.example.proyecto2.Repository.IDao;
+import com.example.proyecto2.Repository.PacienteRepository;
 import com.example.proyecto2.entity.Paciente;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
+@Service
 public class PacienteService {
-    private IDao<Paciente> pacienteDao;
+    private final PacienteRepository pacienteRepository;
 
-
-    public PacienteService(IDao<Paciente>pacienteDao) {
-        this.pacienteDao = pacienteDao;
+    @Autowired
+    public PacienteService(PacienteRepository pacienteRepository) {
+        this.pacienteRepository = pacienteRepository;
     }
 
     public Paciente registrarPaciente(Paciente paciente) {
-        return pacienteDao.guardar(paciente);
+        return pacienteRepository.save(paciente);
     }
 
-    public void eliminar(int id) {
-        pacienteDao.eliminar(id);
+    public void eliminar(Long id) {
+        pacienteRepository.deleteById(id);
     }
 
-    public Paciente buscar(int id) {
-        return pacienteDao.buscar(id);
+    public Optional<Paciente> buscar(Long id) {
+        return pacienteRepository.findById(id);
     }
 
     public List<Paciente> listar() {
-        return pacienteDao.listar();
+        return pacienteRepository.findAll();
     }
 
     public Paciente actualizar(Paciente paciente) {
-        return pacienteDao.actualizar(paciente);
+        return pacienteRepository.save(paciente);
     }
 }

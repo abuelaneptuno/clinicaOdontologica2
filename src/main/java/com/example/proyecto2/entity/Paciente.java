@@ -1,14 +1,27 @@
 package com.example.proyecto2.entity;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "PACIENTES")
 public class Paciente {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String nombre;
     private String apellido;
     private String dni;
-    //private Domicilio domicilio;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
+    private Domicilio domicilio;
     //private Date fechaAlta;
 
-    public Paciente(int id, String nombre, String apellido, String dni) {
+    @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
+    private List<Turno> turnos;
+
+    public Paciente(Long id, String nombre, String apellido, String dni) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -20,11 +33,11 @@ public class Paciente {
     public Paciente() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

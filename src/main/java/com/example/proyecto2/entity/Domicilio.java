@@ -1,9 +1,21 @@
 package com.example.proyecto2.entity;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "DOMICILIOS")
 public class Domicilio {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String provincia;
     private String ciudad;
     private String direccion;
+
+    @OneToMany(mappedBy = "domicilio")
+    private Paciente paciente;
 
     public Domicilio(String provincia, String ciudad, String direccion) {
         this.provincia = provincia;

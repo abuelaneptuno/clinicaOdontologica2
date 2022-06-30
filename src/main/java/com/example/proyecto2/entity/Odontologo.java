@@ -1,13 +1,20 @@
 package com.example.proyecto2.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "ODONTOLOGOS")
 public class Odontologo {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private int matricula;
     private String nombre;
     private String apellido;
 
 
-    public Odontologo(int id, int matricula, String nombre, String apellido) {
+    public Odontologo(Long id, int matricula, String nombre, String apellido) {
         this.id = id;
         this.matricula = matricula;
         this.nombre = nombre;
@@ -15,11 +22,17 @@ public class Odontologo {
 
     }
 
-    public int getId() {
+    public Odontologo(int matricula, String nombre, String apellido) {
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
