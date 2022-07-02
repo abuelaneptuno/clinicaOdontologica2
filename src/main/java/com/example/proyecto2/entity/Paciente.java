@@ -1,5 +1,7 @@
 package com.example.proyecto2.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class Paciente {
     //private Date fechaAlta;
 
     @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Turno> turnos;
 
     public Paciente(Long id, String nombre, String apellido, String dni) {

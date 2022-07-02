@@ -1,6 +1,9 @@
 package com.example.proyecto2.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "ODONTOLOGOS")
@@ -12,6 +15,10 @@ public class Odontologo {
     private int matricula;
     private String nombre;
     private String apellido;
+
+    @OneToMany(mappedBy = "odontologo", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Turno> listaDeTurnos;
 
 
     public Odontologo(Long id, int matricula, String nombre, String apellido) {

@@ -14,9 +14,6 @@ public class Domicilio {
     private String ciudad;
     private String direccion;
 
-    @OneToMany(mappedBy = "domicilio")
-    private Paciente paciente;
-
     public Domicilio(String provincia, String ciudad, String direccion) {
         this.provincia = provincia;
         this.ciudad = ciudad;

@@ -1,11 +1,28 @@
 package com.example.proyecto2.entity;
 
 import java.util.Date;
+
+import lombok.NoArgsConstructor;
 import org.apache.log4j.Logger;
 
-    public class Turno {
-        private Odontologo odontologo;
+import javax.persistence.*;
+
+@Entity
+@Table(name = "turnos")
+@NoArgsConstructor
+public class Turno {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //REVISAR DISINTOS
+    private Integer id;
+
+        @ManyToOne
+        @JoinColumn(name = "patient_id", nullable = false)
         private Paciente paciente;
+
+        @ManyToOne
+        @JoinColumn(name = "odontologist_id", nullable = false)
+        private Odontologo odontologo;
+
         private Date fecha;
         private int horario;
 
@@ -16,9 +33,6 @@ import org.apache.log4j.Logger;
             this.paciente = paciente;
             this.fecha = fecha;
             logger.info("Se creó un odontólogo");
-        }
-
-        public Turno() {
         }
 
         public Odontologo getOdontologo() {
