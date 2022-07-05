@@ -21,9 +21,9 @@ public class OdontologoController {
         this.odontologoService = odontologoService;
     }
 
-    @PostMapping("/new")
-    public ResponseEntity<Odontologo> registrarOdontologo(@RequestBody Odontologo odontologo) {
-        return ResponseEntity.ok(odontologoService.registrarOdontologo(odontologo));
+    @PostMapping("/registrar")
+    public Odontologo registrarOdontologo(@RequestBody Odontologo odontologo) {
+        return odontologoService.registrarOdontologo(odontologo);
     }
 
     @GetMapping("/{id}")

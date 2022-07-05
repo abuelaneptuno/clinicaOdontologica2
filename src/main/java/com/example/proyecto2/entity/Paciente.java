@@ -29,8 +29,6 @@ public class Paciente {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        //this.domicilio = domicilio;
-        //this.fechaAlta = fechaAlta;
     }
 
     public Paciente() {

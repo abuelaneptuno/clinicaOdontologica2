@@ -26,13 +26,12 @@ public class Odontologo {
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
-
     }
 
-    public Odontologo(int matricula, String nombre, String apellido) {
-        this.matricula = matricula;
+    public Odontologo(String nombre, String apellido, int matricula) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.matricula = matricula;
     }
 
     public Long getId() {

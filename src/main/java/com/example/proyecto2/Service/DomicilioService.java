@@ -5,6 +5,7 @@ import com.example.proyecto2.entity.Domicilio;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DomicilioService {
@@ -19,8 +20,8 @@ public class DomicilioService {
         return domicilio;
     }
 
-    public Domicilio buscar(Long id) {
-        return domicilioRepository.findById(id).get();
+    public Optional<Domicilio> buscar(Long id) {
+        return domicilioRepository.findById(id);
     }
 
     public List<Domicilio> buscarTodos() {
@@ -29,5 +30,13 @@ public class DomicilioService {
 
     public void eliminar(Long id) {
         domicilioRepository.deleteById(id);
+    }
+
+    public List<Domicilio> listar() {
+        return domicilioRepository.findAll();
+    }
+
+    public Domicilio actualizar(Domicilio domicilio) {
+        return domicilioRepository.save(domicilio);
     }
 }

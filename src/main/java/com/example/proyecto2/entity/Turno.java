@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //REVISAR DISINTOS
-    private Integer id;
+    private Long id;
 
         @ManyToOne
         @JoinColumn(name = "patient_id", nullable = false)
@@ -67,7 +67,15 @@ public class Turno {
             this.horario = horario;
         }
 
-        @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
         public String toString() {
             return "Turno{" +
                     "Odontologo=" + odontologo.getNombre() + " " + odontologo.getApellido() + '\'' +
