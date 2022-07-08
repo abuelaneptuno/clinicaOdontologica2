@@ -20,18 +20,13 @@ public class Odontologo {
     @JsonIgnore
     private List<Turno> listaDeTurnos;
 
-
-    public Odontologo(Long id, int matricula, String nombre, String apellido) {
-        this.id = id;
+    public Odontologo(int matricula, String nombre, String apellido) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
-    public Odontologo(String nombre, String apellido, int matricula) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.matricula = matricula;
+    public Odontologo() {
     }
 
     public Long getId() {

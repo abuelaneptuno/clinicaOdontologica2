@@ -4,6 +4,7 @@ import com.example.proyecto2.Service.PacienteService;
 import com.example.proyecto2.Service.TurnoService;
 import com.example.proyecto2.entity.Paciente;
 import com.example.proyecto2.entity.Turno;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.Optional;
 @RequestMapping("/turnos")
 public class TurnoController {
     private final TurnoService turnoService;
+    private static final Logger logger = Logger.getLogger(TurnoController.class);
 
     @Autowired
     public TurnoController(TurnoService turnoService) {
@@ -24,6 +26,7 @@ public class TurnoController {
 
     @PostMapping("/new")
     public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) {
+        logger.info("Creando turno");
         return ResponseEntity.ok(turnoService.registrarTurno(turno));
     }
 

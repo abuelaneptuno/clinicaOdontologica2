@@ -4,3 +4,32 @@ INFO    2022-06-26 18:19:25,781 [http-nio-8080-exec-1] com.example.proyecto2.Rep
 ERROR   2022-06-26 18:19:27,075 [http-nio-8080-exec-1] com.example.proyecto2.Repository.IDao  - No se pudo listar
 INFO    2022-06-26 18:26:04,719 [http-nio-8080-exec-2] com.example.proyecto2.Repository.IDao  - Intentando listar
 ERROR   2022-06-26 18:26:06,107 [http-nio-8080-exec-2] com.example.proyecto2.Repository.IDao  - No se pudo listar
+INFO    2022-07-06 19:04:23,255 [http-nio-8080-exec-2] com.example.proyecto2.Controller.OdontologoController  - Guardado correctamente
+INFO    2022-07-06 19:04:36,937 [http-nio-8080-exec-3] com.example.proyecto2.Controller.OdontologoController  - Guardado correctamente
+INFO    2022-07-06 21:26:01,163 [http-nio-8080-exec-2] com.example.proyecto2.Controller.OdontologoController  - Guardado correctamente
+INFO    2022-07-06 21:27:18,415 [http-nio-8080-exec-10] com.example.proyecto2.Controller.OdontologoController  - Guardado correctamente
+INFO    2022-07-06 21:34:47,295 [http-nio-8080-exec-9] com.example.proyecto2.Controller.OdontologoController  - Guardado correctamente
+INFO    2022-07-06 21:45:54,962 [http-nio-8080-exec-1] com.example.proyecto2.Controller.PacienteController  - Guardado pacientenull
+INFO    2022-07-06 21:47:53,316 [http-nio-8080-exec-1] com.example.proyecto2.Controller.PacienteController  - Guardado pacientenull
+INFO    2022-07-06 21:48:15,823 [http-nio-8080-exec-3] com.example.proyecto2.Controller.PacienteController  - Intento de actualizar paciente id:1<200 OK OK,Paciente{id=1, nombre='Carlaaaa', apellido='Lopez', dni='1234, fecha de alta='null'},[]>
+INFO    2022-07-06 21:52:40,072 [http-nio-8080-exec-1] com.example.proyecto2.Controller.OdontologoController  - Guardado correctamente
+INFO    2022-07-06 22:04:19,243 [http-nio-8080-exec-1] com.example.proyecto2.Controller.OdontologoController  - Se eliminó un odontologo
+INFO    2022-07-06 22:06:28,133 [http-nio-8080-exec-5] com.example.proyecto2.Controller.PacienteController  - Guardado pacientenull
+INFO    2022-07-07 19:16:32,386 [http-nio-8080-exec-7] com.example.proyecto2.Controller.PacienteController  - Guardado pacientenull
+INFO    2022-07-07 19:39:23,229 [http-nio-8080-exec-4] com.example.proyecto2.Controller.PacienteController  - Guardado pacientenull
+INFO    2022-07-07 23:55:00,791 [http-nio-8080-exec-4] com.example.proyecto2.Controller.PacienteController  - Guardado pacientenull
+INFO    2022-07-07 23:56:55,639 [http-nio-8080-exec-10] com.example.proyecto2.Controller.PacienteController  - Guardado pacientenull
+INFO    2022-07-08 18:20:52,598 [http-nio-8080-exec-10] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:23:59,290 [http-nio-8080-exec-1] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:24:08,599 [http-nio-8080-exec-3] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:25:34,968 [http-nio-8080-exec-6] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:32:03,053 [http-nio-8080-exec-8] com.example.proyecto2.Controller.TurnoController  - Creando turno
+INFO    2022-07-08 18:33:11,979 [http-nio-8080-exec-2] com.example.proyecto2.Controller.TurnoController  - Creando turno
+INFO    2022-07-08 18:34:07,389 [http-nio-8080-exec-6] com.example.proyecto2.Controller.TurnoController  - Creando turno
+INFO    2022-07-08 18:35:17,514 [http-nio-8080-exec-3] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:36:39,401 [http-nio-8080-exec-4] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:36:39,494 [http-nio-8080-exec-3] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:36:39,865 [http-nio-8080-exec-10] com.example.proyecto2.Controller.TurnoController  - Creando turno
+INFO    2022-07-08 18:37:44,939 [http-nio-8080-exec-8] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:37:45,035 [http-nio-8080-exec-9] com.example.proyecto2.Controller.PacienteController  - Guardado paciente null
+INFO    2022-07-08 18:37:45,432 [http-nio-8080-exec-4] com.example.proyecto2.Controller.TurnoController  - Creando turno

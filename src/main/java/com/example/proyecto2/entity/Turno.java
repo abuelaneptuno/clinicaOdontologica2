@@ -2,14 +2,12 @@ package com.example.proyecto2.entity;
 
 import java.util.Date;
 
-import lombok.NoArgsConstructor;
 import org.apache.log4j.Logger;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "turnos")
-@NoArgsConstructor
 public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //REVISAR DISINTOS
@@ -26,13 +24,13 @@ public class Turno {
         private Date fecha;
         private int horario;
 
-        private static final Logger logger = Logger.getLogger(Odontologo.class);
+    public Turno() {
+    }
 
-        public Turno(Odontologo odontologo, Paciente paciente, Date fecha) {
+    public Turno(Odontologo odontologo, Paciente paciente, Date fecha) {
             this.odontologo = odontologo;
             this.paciente = paciente;
             this.fecha = fecha;
-            logger.info("Se creó un odontólogo");
         }
 
         public Odontologo getOdontologo() {

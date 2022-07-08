@@ -3,6 +3,7 @@ package com.example.proyecto2.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -14,21 +15,30 @@ public class Paciente {
     private String nombre;
     private String apellido;
     private String dni;
+    private Date fechaAlta;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
-    //private Date fechaAlta;
+
 
     @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<Turno> turnos;
 
-    public Paciente(Long id, String nombre, String apellido, String dni) {
-        this.id = id;
+    public Paciente(String nombre, String apellido, String dni, Domicilio domicilio) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
+        this.domicilio = domicilio;
+    }
+
+    public Paciente(String nombre, String apellido, String dni, Domicilio domicilio, Date fechaAlta) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.domicilio = domicilio;
+        this.fechaAlta = fechaAlta;
     }
 
     public Paciente() {
@@ -73,6 +83,7 @@ public class Paciente {
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", dni='" + dni +
+                ", fecha de alta='" + fechaAlta + '\'' +
                 '}';
     }
 }
